@@ -26,7 +26,7 @@ export default async function RentPage({ searchParams }: { searchParams: Promise
     <>
       <PageHeader
         title="Rent roll"
-        subtitle="Every tenant’s rent and due date for the month."
+        subtitle="Every tenant's rent and due date for the month."
         actions={
           <div className="segmented" style={{ alignItems: 'center' }}>
             <Link href={`/rent?period=${addMonths(period, -1)}`} aria-label="Previous month"><ChevronLeft className="icon" style={{ width: 16 }} /></Link>

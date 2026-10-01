@@ -29,7 +29,7 @@ export default async function PaymentsPage({ searchParams }: { searchParams: Pro
     <>
       <PageHeader
         title="Payments"
-        subtitle="Every rent payment you’ve recorded."
+        subtitle="Every rent payment you have recorded."
         actions={<Link className="btn" href="/payments/new" data-testid="add-payment"><Plus className="icon" />Record payment</Link>}
       />
       <section className="grid grid-3" style={{ marginBottom: 16 }}>
@@ -39,7 +39,7 @@ export default async function PaymentsPage({ searchParams }: { searchParams: Pro
           const counts = new Map<string, number>();
           p.payments.forEach((x) => counts.set(x.method, (counts.get(x.method) ?? 0) + 1));
           const top = [...counts.entries()].sort((a, b) => b[1] - a[1])[0];
-          return top ? METHOD[top[0]] : '—';
+          return top ? METHOD[top[0]] : 'None yet';
         })()} />
       </section>
       <form className="filters" action="/payments">
@@ -71,7 +71,7 @@ export default async function PaymentsPage({ searchParams }: { searchParams: Pro
                       <td>{formatPeriod(x.period)}</td>
                       <td>{formatDate(x.paidOn)}</td>
                       <td><span className="chip">{METHOD[x.method]}</span></td>
-                      <td className="muted small">{x.reference ?? '—'}</td>
+                      <td className="muted small">{x.reference ?? 'None'}</td>
                       <td className="right amount green">{naira(x.amount)}</td>
                       <td className="right"><Link className="icon-btn" href={`/payments/${x.id}/receipt`} title="Receipt"><Receipt className="icon" /></Link></td>
                     </tr>

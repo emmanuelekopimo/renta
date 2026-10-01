@@ -58,7 +58,7 @@ export default async function TenantsPage({ searchParams }: { searchParams: Prom
                     <td className="amount">{naira(t.rentAmount)}</td>
                     <td>{ordinal(t.dueDay)}</td>
                     <td>{roll.get(t.id) ? <StatusBadge status={roll.get(t.id)!.status.status} /> : <span className="badge badge-neutral">Moved out</span>}</td>
-                    <td className={`right amount ${arrears.get(t.id) ? 'red' : ''}`}>{arrears.get(t.id) ? naira(arrears.get(t.id)!) : '—'}</td>
+                    <td className={`right amount ${arrears.get(t.id) ? 'red' : ''}`}>{arrears.get(t.id) ? naira(arrears.get(t.id)!) : '₦0'}</td>
                   </tr>
                 ))}
               </tbody>

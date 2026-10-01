@@ -34,7 +34,7 @@ export default async function RemindersPage() {
       <section className="grid grid-main">
         <div className="stack">
           {overdue.length === 0 && (
-            <div className="card"><Empty Icon={CircleCheck} title="No overdue rent 🎉">Every tenant is up to date.</Empty></div>
+            <div className="card"><Empty Icon={CircleCheck} title="No overdue rent">Every tenant is up to date.</Empty></div>
           )}
           {overdue.map((o) => (
             <div className="card" key={o.tenant.id} data-testid="overdue-item">

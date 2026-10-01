@@ -69,7 +69,7 @@ export const tenants = pgTable(
     unitLabel: varchar('unit_label', { length: 40 }).notNull(),
     /** Monthly rent in whole Naira. */
     rentAmount: integer('rent_amount').notNull(),
-    /** Day of the month rent is due (1–28). */
+    /** Day of the month rent is due (1 to 28). */
     dueDay: integer('due_day').notNull().default(1),
     leaseStart: date('lease_start').notNull(),
     leaseEnd: date('lease_end'),

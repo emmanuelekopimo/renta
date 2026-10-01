@@ -23,8 +23,8 @@ export default async function AppLayout({ children }: { children: React.ReactNod
         <SideNav overdueCount={overdue.length} />
         <div className="sidebar-foot">
           <div className="promo">
-            <strong>Tip 💡</strong>
-            Tap “Remind all” on the Reminders page to nudge every late payer at once.
+            <strong>Tip</strong>
+            Tap "Remind all" on the Reminders page to nudge every late payer at once.
           </div>
           <div className="me">
             <Avatar seed={session.name} />

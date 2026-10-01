@@ -7,7 +7,7 @@ import '@fontsource/inter/800.css';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: { default: 'Renta — Rent made simple', template: '%s · Renta' },
+  title: { default: 'Renta | Rent manager for landlords', template: '%s · Renta' },
   description: 'Properties, tenants, rent due dates, payments and overdue reminders for landlords.',
 };
 

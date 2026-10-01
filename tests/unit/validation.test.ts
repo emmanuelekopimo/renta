@@ -22,7 +22,7 @@ describe('validation', () => {
     expect(r.status).toBe('active');
   });
 
-  it('rejects a due day outside 1–28 and a bad phone', () => {
+  it('rejects a due day outside 1 to 28 and a bad phone', () => {
     const r = tenantSchema.safeParse({ ...tenant, dueDay: '31', phone: 'abc' });
     expect(r.success).toBe(false);
     const errs = fieldErrors(r.error!);

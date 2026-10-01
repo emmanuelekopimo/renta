@@ -109,5 +109,5 @@ export async function sendReminderAction(fd: FormData) {
 export async function sendAllRemindersAction() {
   const s = await requireSession();
   const sent = await cmd.sendAllReminders(getDb(), { id: s.landlordId, name: s.name }, getToday());
-  done('/reminders', sent ? `${sent} reminder${sent === 1 ? '' : 's'} sent` : 'Nobody is overdue 🎉');
+  done('/reminders', sent ? `${sent} reminder${sent === 1 ? '' : 's'} sent` : 'Nobody is overdue');
 }

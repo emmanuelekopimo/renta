@@ -22,7 +22,7 @@ export default async function DashboardPage() {
     <>
       <PageHeader
         title={`${greet}, ${session.name.split(' ')[0]}`}
-        subtitle={`Here’s your rent for ${formatPeriod(s.period)} · Today is ${formatDate(today)}`}
+        subtitle={`Here is your rent for ${formatPeriod(s.period)} · Today is ${formatDate(today)}`}
         actions={
           <>
             <Link className="btn btn-ghost" href="/tenants/new">

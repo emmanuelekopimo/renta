@@ -21,7 +21,7 @@ export default async function NewPaymentPage({
   const p = await loadPortfolio(getDb(), s.landlordId);
   const tenants = p.tenants
     .filter((t) => t.status === 'active')
-    .map((t) => ({ id: t.id, label: `${t.fullName} — ${t.property.name}, ${t.unitLabel}`, rent: t.rentAmount }));
+    .map((t) => ({ id: t.id, label: `${t.fullName} (${t.property.name}, ${t.unitLabel})`, rent: t.rentAmount }));
   return (
     <div style={{ maxWidth: 720 }}>
       <Link className="back" href="/payments"><ArrowLeft className="icon" />Payments</Link>

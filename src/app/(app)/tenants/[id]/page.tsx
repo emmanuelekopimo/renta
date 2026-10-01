@@ -101,7 +101,7 @@ export default async function TenantPage({ params }: { params: Promise<{ id: str
                 <button className="btn btn-dark btn-block" type="submit" data-testid="send-reminder"><BellRing className="icon" />Send overdue reminder</button>
               </form>
             ) : (
-              <p className="muted small" style={{ marginBottom: 12 }}>No overdue rent — nothing to remind.</p>
+              <p className="muted small" style={{ marginBottom: 12 }}>No overdue rent, so there is nothing to remind.</p>
             )}
             <div className="list">
               {sent.length === 0 && <p className="muted small">No reminders sent yet.</p>}

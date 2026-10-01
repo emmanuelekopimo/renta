@@ -130,6 +130,6 @@ describe('buildReminderMessage', () => {
     expect(msg).toContain('₦450,000');
     expect(msg).toContain('October 2026');
     expect(msg).toContain('1 day overdue');
-    expect(msg).toContain('Adaeze Okafor via Renta');
+    expect(msg).toContain('Adaeze Okafor (sent via Renta)');
   });
 });
