@@ -1,8 +1,8 @@
 # Renta
 
-**Rent collection, minus the stress.** Renta is a property and rent manager for landlords. It tracks properties, tenants, rent due dates and payment records, and sends overdue reminders.
+Renta is a property and rent manager for landlords. It tracks properties, tenants, rent due dates and payment records, and sends overdue reminders.
 
-📄 **Full documentation with annotated screenshots:** [`docs/Renta-Documentation.pdf`](docs/Renta-Documentation.pdf)
+**Full documentation with annotated screenshots:** [`docs/Renta-Documentation.pdf`](docs/Renta-Documentation.pdf)
 
 ![Dashboard](docs/screenshots/02-dashboard.png)
 

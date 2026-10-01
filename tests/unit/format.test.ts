@@ -14,7 +14,7 @@ describe('format', () => {
   });
   it('formats dates and periods', () => {
     expect(formatDate('2026-10-05')).toBe('5 Oct 2026');
-    expect(formatDate(null)).toBe('—');
+    expect(formatDate(null)).toBe('Not set');
     expect(formatPeriod('2026-01')).toBe('January 2026');
   });
   it('builds ordinals', () => {

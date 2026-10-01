@@ -184,7 +184,7 @@ export function TenantForm(props: { tenant?: TenantDefaults; properties: { id: n
         </Field>
         <Field name="unitLabel" label="Unit / Flat" state={state} defaultValue={t.unitLabel} inputProps={{ placeholder: 'e.g. Flat 2B' }} />
         <Field name="rentAmount" label="Monthly rent (₦)" type="number" state={state} defaultValue={t.rentAmount} inputProps={{ min: 1 }} />
-        <Field name="dueDay" label="Rent due day" type="number" state={state} defaultValue={t.dueDay ?? 1} hint="Day of each month (1–28)" inputProps={{ min: 1, max: 28 }} />
+        <Field name="dueDay" label="Rent due day" type="number" state={state} defaultValue={t.dueDay ?? 1} hint="Day of each month (1 to 28)" inputProps={{ min: 1, max: 28 }} />
         <Field name="leaseStart" label="Lease start" type="date" state={state} defaultValue={t.leaseStart ?? props.today} />
         <Field name="leaseEnd" label="Lease end (optional)" type="date" state={state} defaultValue={t.leaseEnd} />
         {t.id && (

@@ -42,7 +42,7 @@ export default async function ReceiptPage({ params }: { params: Promise<{ id: st
             <dt>Rent for</dt><dd>{formatPeriod(pay.period)}</dd>
             <dt>Date paid</dt><dd>{formatDate(pay.paidOn)}</dd>
             <dt>Method</dt><dd style={{ textTransform: 'capitalize' }}>{pay.method}</dd>
-            <dt>Reference</dt><dd>{pay.reference ?? '—'}</dd>
+            <dt>Reference</dt><dd>{pay.reference ?? 'None'}</dd>
             <dt>Received by</dt><dd>{s.name}</dd>
           </dl>
         </div>

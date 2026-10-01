@@ -16,7 +16,7 @@ export default async function LoginPage() {
           Renta
         </div>
         <div>
-          <h1>Rent collection, minus the stress.</h1>
+          <h1>Know who has paid and who is late.</h1>
           <p>Track properties, tenants and due dates. Record payments in seconds and nudge late payers with one tap.</p>
         </div>
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -30,11 +30,11 @@ export default async function LoginPage() {
       <section className="auth-form">
         <div className="inner">
           <div>
-            <h1>Welcome back 👋</h1>
+            <h1>Welcome back</h1>
             <p className="muted" style={{ marginTop: 6 }}>Sign in to manage your properties.</p>
           </div>
           <div className="demo-hint">
-            <strong>Demo account</strong> — demo@renta.app / renta123 (already filled in)
+            <strong>Demo account:</strong> demo@renta.app / renta123 (already filled in)
           </div>
           <LoginForm />
         </div>

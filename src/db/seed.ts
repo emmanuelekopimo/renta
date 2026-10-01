@@ -125,7 +125,7 @@ export async function seed(db: Db, today: string) {
       period,
       channel: 'whatsapp',
       amountDue: emeka.rentAmount,
-      message: `Hi Emeka, this is a friendly reminder that your rent for last month at Maitama Court (Wing B) is overdue. Thank you! — Adaeze Okafor via Renta`,
+      message: `Hi Emeka, this is a friendly reminder that your rent for last month at Maitama Court (Wing B) is overdue. Thank you. Adaeze Okafor (sent via Renta)`,
       sentAt: new Date(`${addDays(dueDateFor(period, emeka.dueDay), 5)}T09:30:00Z`),
     });
   }
@@ -139,7 +139,7 @@ if (require.main === module) {
   const ifEmpty = process.argv.includes('--if-empty');
   (async () => {
     if (ifEmpty && (await db.select({ id: landlords.id }).from(landlords).limit(1)).length > 0) {
-      console.log('✔ Database already has data — skipping seed');
+      console.log('✔ Database already has data, skipping seed');
       return false;
     }
     await seed(db, today);

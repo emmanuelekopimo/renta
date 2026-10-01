@@ -31,13 +31,13 @@ const SCREENS: Screen[] = [
     intro: 'Every page is private to the signed-in landlord. Sessions are stored in a signed, HTTP-only cookie that lasts 7 days.',
     notes: [
       'Demo credentials are shown here and pre-filled, so a presenter can sign in with one click.',
-      'Email and password fields. Wrong details show “Incorrect email or password” without revealing which one was wrong.',
+      'Email and password fields. Wrong details show "Incorrect email or password" without revealing which one was wrong.',
       'Sign in takes you to the dashboard.',
     ],
   },
   {
     shot: '02-dashboard', title: 'Dashboard', route: '/',
-    intro: 'The home screen answers the landlord’s three daily questions: how much came in, who is late, and what is due next.',
+    intro: 'The home screen answers the landlord\'s three daily questions: how much came in, who is late, and what is due next.',
     notes: [
       'Main navigation. The red badge on Reminders counts tenants who are overdue right now.',
       'Record payment: the most common action, always one tap away.',
@@ -57,7 +57,7 @@ const SCREENS: Screen[] = [
       'Property type and occupied units (active tenants / units).',
       'Occupancy bar and total monthly rent for the property.',
     ],
-    steps: ['Click Add property.', 'Fill in name, address, city, units and type, then pick a cover.', 'Click Add property. You land on the new property’s page and see a confirmation toast.'],
+    steps: ['Click Add property.', 'Fill in name, address, city, units and type, then pick a cover.', 'Click Add property. You land on the new property\'s page and see a confirmation toast.'],
   },
   {
     shot: '04-property-detail', title: 'Property details', route: '/properties/:id',
@@ -65,7 +65,7 @@ const SCREENS: Screen[] = [
     notes: [
       'Edit the property, or add a tenant who is pre-assigned to it.',
       'Unit count, occupancy and the monthly/annual rent roll.',
-      'Tenants with rent, due day, lease end and this month’s status. Click a tenant to open their profile.',
+      'Tenants with rent, due day, lease end and this month\'s status. Click a tenant to open their profile.',
     ],
   },
   {
@@ -79,7 +79,7 @@ const SCREENS: Screen[] = [
     notes: [
       'Search by name, email, unit or property.',
       'Filter: Active, Moved out or All.',
-      'This month’s status: Paid, Part-paid, Upcoming or Overdue.',
+      'This month\'s status: Paid, Part-paid, Upcoming or Overdue.',
       'Arrears: unpaid rent from every overdue month added together.',
     ],
   },
@@ -97,11 +97,11 @@ const SCREENS: Screen[] = [
   {
     shot: '08-add-tenant', title: 'Add tenant', route: '/tenants/new',
     intro: 'A tenant belongs to a property and has a monthly rent and a due day. These two values drive every rent calculation.',
-    notes: ['Monthly rent in whole Naira.', 'Due day (1–28), the day of the month rent is due. Using 28 or less means every month has that day.', 'Optional lease end. Renta stops charging after this month.'],
+    notes: ['Monthly rent in whole Naira.', 'Due day (1 to 28), the day of the month rent is due. Using 28 or less means every month has that day.', 'Optional lease end. Renta stops charging after this month.'],
   },
   {
     shot: '09-rent-roll', title: 'Rent roll (due dates)', route: '/rent',
-    intro: 'The rent roll lists every tenant’s due date and payment status for one month. Use the arrows to move between months.',
+    intro: 'The rent roll lists every tenant\'s due date and payment status for one month. Use the arrows to move between months.',
     notes: [
       'Month switcher (previous / next).',
       'Expected, collected and overdue totals for the month.',
@@ -115,7 +115,7 @@ const SCREENS: Screen[] = [
     intro: 'Payments are always linked to a rent month, so part-payments and late payments are tracked correctly.',
     notes: [
       'Tenant (pre-selected when you come from a profile or the rent roll).',
-      'Over-payment guard: you can’t record more than the balance outstanding for that month.',
+      'Over-payment guard: you can\'t record more than the balance outstanding for that month.',
       'Rent month this payment covers.',
       'Method: bank transfer, POS, cash or card, plus an optional reference.',
     ],
@@ -137,7 +137,7 @@ const SCREENS: Screen[] = [
     notes: [
       'Remind all: sends a reminder to every overdue tenant at once.',
       'How late, and how many months are unpaid.',
-      'Message preview, written from the tenant’s name, amount, month and days late.',
+      'Message preview, written from the tenant\'s name, amount, month and days late.',
       'Channel: WhatsApp, SMS or Email.',
       'Sent history (each reminder is saved with its channel, amount and time).',
     ],
@@ -212,12 +212,12 @@ function screenPage(s: Screen, idx: number) {
   </section>`;
 }
 
-const html = `<!doctype html><html><head><meta charset="utf-8"><title>Renta — Documentation</title><style>${css}</style></head><body>
+const html = `<!doctype html><html><head><meta charset="utf-8"><title>Renta Documentation</title><style>${css}</style></head><body>
 
 <section class="page cover">
   <div class="brand"><img src="${svg('public/img/logo.svg')}" />Renta</div>
   <div>
-    <h1>Rent collection, minus the stress.</h1>
+    <h1>Know who has paid and who is late.</h1>
     <p class="sub">A property & rent manager for landlords: properties, tenants, rent due dates, payment records and overdue reminders.</p>
   </div>
   <img class="hero" src="${img('02-dashboard')}" />
@@ -229,7 +229,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><title>Renta — 
 
 <section class="page">
   <div class="eyebrow">Contents</div>
-  <h2>What’s inside</h2>
+  <h2>What\'s inside</h2>
   <ol class="toc">
     <li><b>Overview</b>: the problem, the solution and the features</li>
     <li><b>How rent is calculated</b>: due dates, statuses, arrears and reminders</li>
@@ -245,15 +245,15 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><title>Renta — 
   <h2 style="margin-top:18px">1 · Overview</h2>
   <p class="lead">Small landlords often track rent in notebooks, WhatsApp chats and memory. They forget who has paid, miss due dates and feel awkward chasing late tenants. <b>Renta</b> puts every property, tenant and payment in one place, works out who owes what automatically, and writes the polite reminder for you.</p>
   <div class="grid3">
-    <div class="card green"><b>🏢 Properties</b>Buildings with units, type, address and occupancy.</div>
-    <div class="card green"><b>👥 Tenants</b>Contact details, unit, monthly rent, due day and lease dates.</div>
-    <div class="card green"><b>📅 Rent due dates</b>A monthly rent roll showing every due date and status.</div>
-    <div class="card green"><b>💳 Payment records</b>Full and part payments, linked to a rent month, with receipts.</div>
-    <div class="card green"><b>🔔 Overdue reminders</b>Personalised messages by WhatsApp, SMS or email, with history.</div>
-    <div class="card green"><b>📊 Dashboard</b>Collection rate, arrears, 6-month chart, CSV export.</div>
+    <div class="card green"><b>Properties</b>Buildings with units, type, address and occupancy.</div>
+    <div class="card green"><b>Tenants</b>Contact details, unit, monthly rent, due day and lease dates.</div>
+    <div class="card green"><b>Rent due dates</b>A monthly rent roll showing every due date and status.</div>
+    <div class="card green"><b>Payment records</b>Full and part payments, linked to a rent month, with receipts.</div>
+    <div class="card green"><b>Overdue reminders</b>Personalised messages by WhatsApp, SMS or email, with history.</div>
+    <div class="card green"><b>Dashboard</b>Collection rate, arrears, 6-month chart, CSV export.</div>
   </div>
   <h3>Design</h3>
-  <p>The look is based on the <b>Bolt</b> app: bright green (<code>#34D186</code>) for main actions, near-black text, soft white cards with large rounded corners, pill-shaped buttons and a bottom tab bar on mobile. The logo combines a roof and the letter “R”. Icons come from <b>Lucide</b>, tenant avatars are generated with <b>DiceBear</b> (Personas), and the property images are custom SVG illustrations that ship with the app.</p>
+  <p>The look is based on the <b>Bolt</b> app: bright green (<code>#34D186</code>) for main actions, near-black text, soft white cards with large rounded corners, pill-shaped buttons and a bottom tab bar on mobile. The logo combines a roof and the letter "R". Icons come from <b>Lucide</b>, tenant avatars are generated with <b>DiceBear</b> (Personas), and the property images are custom SVG illustrations that ship with the app.</p>
 </section>
 
 <section class="page">
@@ -261,12 +261,12 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><title>Renta — 
   <h2>2 · How rent is calculated</h2>
   <p class="lead">All rent maths lives in one pure module, <code>src/lib/rent.ts</code>, which never touches the database. That makes it easy to unit test and easy to explain.</p>
   <h3>Rent periods & due dates</h3>
-  <p>Rent is charged per <b>period</b> (a calendar month, <code>YYYY-MM</code>). For each tenant, Renta creates one period for every month from the lease start up to today, or up to the lease end if that comes first. Each period’s due date is the tenant’s <b>due day</b> in that month (for example, the 5th → <code>2026-10-05</code>).</p>
+  <p>Rent is charged per <b>period</b> (a calendar month, <code>YYYY-MM</code>). For each tenant, Renta creates one period for every month from the lease start up to today, or up to the lease end if that comes first. Each period\'s due date is the tenant\'s <b>due day</b> in that month (for example, the 5th → <code>2026-10-05</code>).</p>
   <h3>Status of a month</h3>
   <table>
     <tr><th>Status</th><th>Rule</th><th>Example (rent ₦100k, due 5 Oct)</th></tr>
     <tr><td><span class="badge b-paid">Paid</span></td><td>Payments for the month ≥ rent</td><td>₦100k recorded for October</td></tr>
-    <tr><td><span class="badge b-due">Upcoming</span></td><td>Nothing paid and the due date hasn’t passed</td><td>Today is 2 Oct, nothing paid</td></tr>
+    <tr><td><span class="badge b-due">Upcoming</span></td><td>Nothing paid and the due date hasn\'t passed</td><td>Today is 2 Oct, nothing paid</td></tr>
     <tr><td><span class="badge b-partial">Part-paid</span></td><td>Some paid, balance left, not yet past due</td><td>₦40k paid on 1 Oct</td></tr>
     <tr><td><span class="badge b-overdue">Overdue</span></td><td>A balance is left <i>after</i> the due date</td><td>Today is 6 Oct, ₦60k still owed</td></tr>
   </table>
@@ -274,15 +274,15 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><title>Renta — 
   <h3>Business rules</h3>
   <ul>
     <li>A payment always belongs to a tenant <i>and</i> a rent month. One month can have several payments (part-payments).</li>
-    <li>You can’t record more than the balance left for a month, so “₦500,000 for a ₦450,000 month” is rejected.</li>
+    <li>You can\'t record more than the balance left for a month, so "₦500,000 for a ₦450,000 month" is rejected.</li>
     <li>Reminders can only be sent to tenants with overdue rent. Each one is saved with its message, channel and the amount due.</li>
     <li>Marking a tenant <i>Moved out</i> with an end date takes them out of the rent roll and reminders from the following month.</li>
-    <li>Every query is limited to the signed-in landlord, so one landlord can never see or change another’s data.</li>
+    <li>Every query is limited to the signed-in landlord, so one landlord can never see or change another\'s data.</li>
   </ul>
   <h3>Reminder message (generated)</h3>
   <pre>Hi Emeka, this is a friendly reminder that your rent of ₦1,500,000 for September 2026 at
 Maitama Court (Wing B) is now 41 days overdue. Please make payment at your earliest
-convenience and share the receipt once done. Thank you! — Adaeze Okafor via Renta</pre>
+convenience and share the receipt once done. Thank you. Adaeze Okafor (sent via Renta)</pre>
 </section>
 
 <section class="page">
@@ -300,7 +300,7 @@ convenience and share the receipt once done. Thank you! — Adaeze Okafor via Re
     <tr><td>Schema</td><td><code>src/db/schema.ts</code>, <code>drizzle/</code></td><td>Tables, enums, relations, generated SQL migrations</td></tr>
     <tr><td>Domain logic</td><td><code>src/lib/rent.ts</code></td><td>Pure rent maths: periods, statuses, ledger, arrears, reminder text</td></tr>
     <tr><td>Validation</td><td><code>src/lib/validation.ts</code></td><td>Zod schemas for every form, returning field-level errors</td></tr>
-    <tr><td>Queries</td><td><code>src/services/portfolio.ts</code></td><td>Load a landlord’s portfolio; rent roll, overdue list, dashboard stats</td></tr>
+    <tr><td>Queries</td><td><code>src/services/portfolio.ts</code></td><td>Load a landlord\'s portfolio; rent roll, overdue list, dashboard stats</td></tr>
     <tr><td>Commands</td><td><code>src/services/commands.ts</code></td><td>Create/update/delete with ownership checks; payments; reminders</td></tr>
     <tr><td>Web</td><td><code>src/app/**</code>, <code>src/components/**</code></td><td>Pages, server actions, API routes (<code>/api/health</code>, <code>/api/summary</code>, <code>/api/payments.csv</code>)</td></tr>
     <tr><td>Auth</td><td><code>src/lib/session.ts</code></td><td>Signed JWT (jose) in an HTTP-only cookie; passwords hashed with bcrypt</td></tr>
@@ -342,7 +342,7 @@ npm run dev                   # http://localhost:3000</pre>
     <tr><td><code>npm run dev</code> / <code>build</code> / <code>start</code></td><td>Develop, build and serve the Next.js app</td></tr>
     <tr><td><code>npm run db:generate</code></td><td>Generate a new SQL migration after editing the schema</td></tr>
     <tr><td><code>npm run db:migrate</code> · <code>db:seed</code></td><td>Apply migrations · reset demo data (<code>-- --if-empty</code> only seeds an empty database)</td></tr>
-    <tr><td><code>RENTA_TODAY=2026-10-14</code></td><td>Optional: fix “today” to a date, for repeatable demos and tests</td></tr>
+    <tr><td><code>RENTA_TODAY=2026-10-14</code></td><td>Optional: fix "today" to a date, for repeatable demos and tests</td></tr>
     <tr><td><code>npm run docs:screens</code> · <code>docs:pdf</code></td><td>Retake the annotated screenshots · rebuild this PDF</td></tr>
   </table>
 
@@ -378,12 +378,12 @@ npm i -g @railway/cli && railway login
 
   <h2 style="margin-top:16px">9 · 5-minute presentation script</h2>
   <div class="timeline">
-    <div class="t"><b>0:00 – 0:40 · Problem.</b> “Landlords track rent in notebooks and WhatsApp, so they forget who paid and feel awkward chasing late tenants.” Show the login page and sign in with the pre-filled demo account.</div>
-    <div class="t"><b>0:40 – 1:40 · Dashboard.</b> Point out collected vs expected, total overdue, the 6-month chart, <i>Due soon</i> and the overdue list. Point to the red badge on Reminders.</div>
-    <div class="t"><b>1:40 – 2:20 · Properties & tenants.</b> Open the property cards (occupancy, late badges), then Emeka Obi’s profile: the coloured month strip shows September and October unpaid.</div>
-    <div class="t"><b>2:20 – 3:20 · Record a payment.</b> On the Rent roll, click <i>Pay</i> for Amaka. Try ₦500,000 to show the over-payment check, then pay ₦450,000 and show the receipt. Back on the dashboard, she has left the overdue list.</div>
-    <div class="t"><b>3:20 – 4:10 · Reminders.</b> Show the generated message, pick WhatsApp and send it, then click <i>Remind all</i>. The history updates straight away.</div>
-    <div class="t"><b>4:10 – 5:00 · Tech & quality.</b> Next.js + TypeScript, Drizzle + PostgreSQL on Railway; the rent rules are pure functions; 56 automated tests. Close on the phone layout.</div>
+    <div class="t"><b>0:00 to 0:40 · Problem.</b> "Landlords track rent in notebooks and WhatsApp, so they forget who paid and feel awkward chasing late tenants." Show the login page and sign in with the pre-filled demo account.</div>
+    <div class="t"><b>0:40 to 1:40 · Dashboard.</b> Point out collected vs expected, total overdue, the 6-month chart, <i>Due soon</i> and the overdue list. Point to the red badge on Reminders.</div>
+    <div class="t"><b>1:40 to 2:20 · Properties & tenants.</b> Open the property cards (occupancy, late badges), then Emeka Obi\'s profile: the coloured month strip shows September and October unpaid.</div>
+    <div class="t"><b>2:20 to 3:20 · Record a payment.</b> On the Rent roll, click <i>Pay</i> for Amaka. Try ₦500,000 to show the over-payment check, then pay ₦450,000 and show the receipt. Back on the dashboard, she has left the overdue list.</div>
+    <div class="t"><b>3:20 to 4:10 · Reminders.</b> Show the generated message, pick WhatsApp and send it, then click <i>Remind all</i>. The history updates straight away.</div>
+    <div class="t"><b>4:10 to 5:00 · Tech & quality.</b> Next.js + TypeScript, Drizzle + PostgreSQL on Railway; the rent rules are pure functions; 56 automated tests. Close on the phone layout.</div>
   </div>
 </section>
 

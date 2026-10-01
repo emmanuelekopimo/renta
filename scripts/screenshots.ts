@@ -68,7 +68,7 @@ async function shot(page: Page, name: string, marks: Mark[] = [], fullPage = fal
   await page.waitForLoadState('networkidle');
   if (marks.length) await annotate(page, marks);
   await page.screenshot({ path: path.join(OUT, `${name}.png`), fullPage });
-  console.log('  📸', name);
+  console.log('  captured', name);
 }
 
 async function waitForServer() {

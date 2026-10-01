@@ -139,6 +139,6 @@ export function buildReminderMessage(input: {
     `Hi ${first}, this is a friendly reminder that your rent of ${input.formatMoney(input.amount)} ` +
     `for ${input.formatPeriod(input.period)} at ${input.propertyName} (${input.unitLabel}) ${lateText}. ` +
     `Please make payment at your earliest convenience and share the receipt once done. ` +
-    `Thank you! — ${input.landlordName} via Renta`
+    `Thank you. ${input.landlordName} (sent via Renta)`
   );
 }
