@@ -136,8 +136,17 @@ export async function seed(db: Db, today: string) {
 if (require.main === module) {
   const { db, pool } = createDb();
   const today = process.env.RENTA_TODAY ?? todayISO();
-  seed(db, today)
-    .then(() => {
+  const ifEmpty = process.argv.includes('--if-empty');
+  (async () => {
+    if (ifEmpty && (await db.select({ id: landlords.id }).from(landlords).limit(1)).length > 0) {
+      console.log('✔ Database already has data — skipping seed');
+      return false;
+    }
+    await seed(db, today);
+    return true;
+  })()
+    .then((seeded) => {
+      if (!seeded) return;
       console.log(`✔ Seeded demo data relative to ${today}`);
       console.log(`  Login: ${DEMO_EMAIL} / ${DEMO_PASSWORD}`);
     })
